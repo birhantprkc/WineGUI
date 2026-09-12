@@ -15,10 +15,19 @@ Two places where you can find the downloads:
 1. You can find the latest version on the [Releases page](https://gitlab.melroy.org/melroy/winegui/-/releases) under "Assets" -> "Packages" on my GitLab.
 2. Find the same packages on the [GitHub Release page](https://github.com/winegui/WineGUI/releases).
 
+On supported 64-bit Debian, Ubuntu, and compatible derivative distributions,
+you can install WineGUI directly through its APT repository:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/winegui/WineGUI/main/scripts/install.sh | sudo bash
+```
+
+This also enables future WineGUI updates through the normal system updates.
+
 Download the WineGUI package you require for your Linux distribution. I provide `.AppImage`, `.deb`, `.rpm` and `.tar.gz` files:
 
 - The **`.AppImage`** is a single, self-contained file that runs on most Linux distributions without installation or root. Download it, make it executable (`chmod +x WineGUI-*.AppImage`) and run it.
-- Use the `.deb` package file for Ubuntu, Debian, Linux Mint, Zorin OS, MX linux, and other Debian-based distributions.
+- Use the `.deb` package file for Ubuntu, Debian, Linux Mint, elementary OS, Zorin OS, Pop!_OS, AnduinOS, MX Linux, and compatible derivatives. Official release DEBs install the WineGUI repository key and APT source when the reported upstream Ubuntu or Debian suite is available from WineGUI, so future WineGUI updates are available through APT; run `sudo apt update` after the initial installation.
 - Use the `.rpm` package for Fedora, RHEL, and similar distributions.
 - The Compressed Binary `.tar.gz` file is available for manual installation or standalone usage. This is prebuild.
 - The Source Code Archive (also `tar.gz`) is intented for building WineGUI from source.
